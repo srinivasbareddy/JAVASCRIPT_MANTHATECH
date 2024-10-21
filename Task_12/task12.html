@@ -1,0 +1,24 @@
+<!-- 12. Implement Google translation for 5 languages ( take a drop down have 5
+ language options- hindi , english , french , telugu , dutch . when you click
+ on each language the text should be displayed in the following languages
+ on ui text :- Hi welcome to google translation ) . -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages:'nl,en,fr,hi,te'}, 'google_translate_element');
+        }
+    </script>
+    <div id="google_translate_element"></div>
+    <h1>Hi...! Welcome to Google translation.</h1>
+</body>
+</html>

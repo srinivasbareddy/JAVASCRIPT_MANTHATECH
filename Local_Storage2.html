@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="setItem()">SetItem</button> <br>
+    <br>
+    <button type="button" onclick="getItem()">GetItem</button> <br>
+    <br>
+    <button type="button" onclick="removeItem()">RemoveItem</button>
+    <br> <br>
+    <button type="button" onclick="removeProperty()">RemoveProperty</button> <br> <br>
+    <p id="demo"></p>
+
+    <script>
+        const output=document.getElementById("demo");
+        function setItem(){
+        const person={
+            Fname:"John",
+            Lname:"Doe",
+            Address:"HYD"
+        }
+        localStorage.setItem('person',JSON.stringify(person));
+        }
+        function getItem(){
+            const person= localStorage.getItem('person');
+            console.log(typeof(person));
+            output.innerHTML="Details of a Person :" + person;
+        }
+
+        function removeProperty(){
+            const storedObject= JSON.parse
+            (localStorage.getItem('person'));
+            // Remove the 'address property'
+            console.log(typeof(storedObject));
+            delete storedObject.Address;
+            // update the local storage
+            localStorage.setItem('person',JSON.stringify(storedObject));
+            localStorage.getItem('person');
+            if(storedObject!==null&& storedObject!==undefined){
+            console.log(typeof JSON.stringify(storedObject)); //
+            string
+            }
+        }
+
+        // removing an object from local storage
+        function removeItem(){
+            localStorage.removeItem('person');
+            output.innerHTML="Remove the object from local stoarge";
+        }
+        console.log(localStorage.length);
+    </script>
+</body>
+</html>

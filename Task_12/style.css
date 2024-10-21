@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+}
+
+select{
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+}
+
+h1{
+    margin: 100px;
+}

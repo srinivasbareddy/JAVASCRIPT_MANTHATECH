@@ -1,0 +1,36 @@
+<!-- 13.Create a Instagram login form with following validations:
+ -> password with 8 chars , atleast 1 ( upper , lower , digit , special symbol )
+ -> username should not have space , digits
+ -> email should end with @gmail.com
+ -> mobile number should accept only digits , exactly of 10 digits
+ Keep three options for user to login via mail , username , mobile number ,
+ for all three options password is common such as
+ Email and password , phone number and password , username and password . -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="task13.css">
+  <title>Instagram Login Form</title>
+</head>
+<body>
+    <h2>Instagram Login</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+      <!-- Email, Username, or Mobile -->
+      <label for="loginInput">Email, Username, or Mobile:</label>
+      <input type="text" id="loginInput" name="loginInput" placeholder="Enter email, username, or mobile">
+      <span id="loginError" class="error"></span>
+  
+      <!-- Password -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+      <span id="passwordError" class="error"></span>
+  
+      <!-- Submit Button -->
+      <button type="submit">Login</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

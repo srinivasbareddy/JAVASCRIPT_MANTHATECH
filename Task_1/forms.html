@@ -1,0 +1,32 @@
+<!-- 1. Implement login functionality take username and password cross check it
+by username = Admin , password = Admin@123 . If it matches then print
+“login success“ otherwise print “ incorrect username or password “ . If the
+username is correct then only check the password . -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+  <form id="myForm">
+    <div class="container">
+      <h1 class="form-heading">Login</h1>
+      
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter your username" />
+      <p id="nameErrMsg" class="error-message"></p>
+    
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="email" placeholder="Enter your password" />
+      <p id="emailErrMsg" class="error-message"></p>
+
+      <div class="button-container">
+        <button type="submit" class="button">Submit</button>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </form>
+</body>
+</html>

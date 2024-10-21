@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 40%;
+    background-color: aqua;
+    padding: 20px;
+    margin: 20px;
+}
+
+.form-heading {
+    font-family: "Roboto";
+    font-size: 36px;
+    text-align: center;
+}
+
+input[type=text], input[type=password]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    border: none;
+    background-color: #f1f1f1;   
+}
+
+.error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 14px;
+}
+
+.button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.button{
+    width: 80px;
+    height: 30px;
+    background-color:greenyellow;
+    border-width: 0px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: #dc3545;
+    transition: 0.3s;
+}

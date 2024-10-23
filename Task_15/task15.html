@@ -1,0 +1,76 @@
+<!-- 15.Create a reset password form with following fields New password , Confirm
+password ) add following restrictions
+-> don't allow user to copy the content
+-> don't allow user to paste the content
+If the user performs any of the above operations, display him a text below
+in red color saying as “ Copy is restricted “ , “ Paste is restricted” , disable
+the right click option . -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Reset Password Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #warning {
+            color: red;
+            font-size: 14px;
+            display: none;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Reset Password</h2>
+    <form id="resetPasswordForm">
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" oncopy="return showWarning('copy')" onpaste="return showWarning('paste')">
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" oncopy="return showWarning('copy')" onpaste="return showWarning('paste')">
+
+        <p id="warning"></p><br/>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        
+        document.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+            showWarning('right-click');
+        });
+
+        function showWarning(action) {
+            const warningText = document.getElementById('warning');
+            if (action === 'copy') {
+                warningText.innerText = 'Copy is restricted';
+            } else if (action === 'paste') {
+                warningText.innerText = 'Paste is restricted';
+            } else if (action === 'right-click') {
+                warningText.innerText = 'Right-click is disabled';
+            }
+            warningText.style.display = 'block';
+            return false; 
+        }
+    </script>
+</body>
+</html>
